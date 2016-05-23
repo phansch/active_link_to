@@ -36,7 +36,7 @@ module ActiveLinkTo
     css_class.strip!
 
     wrap_tag = active_options[:wrap_tag].present? ? active_options[:wrap_tag] : nil
-    if css_class.present? && !active_options.dekete(:skip_link_to)
+    if css_class.present? && !active_options.delete(:skip_link_to)
       link_options[:class] = css_class
     end
 
